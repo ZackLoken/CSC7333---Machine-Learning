@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Detector</title>
+</head>
+<style>
+    h2{color:blue; padding-top: 1%;}
+    body{background-color: cornsilk;}
+    input{display:block;}
+    .btn:hover{background-color: goldenrod;}
+    .center{margin: auto; max-width:fit-content;}
+    form{ padding-top: 5%;}
+    div{margin: 2%;position: relative; background-color:gray;}
+    footer{bottom: 0%; position: absolute;}
+    h4{padding-bottom:4%;}
+    img{width:20%; padding-bottom:20%;}
+    .image{text-align:center}    
+    </style>
+    
+<body>
+    <div>
+        <h2 class="center">Fake News Detection System</h2>
+        <h5 class="center">Developed by Andrew Okafor, Dillon Jones, Lin Zeng, Miriam Nnadili, Shaojing Tian, Zack Loken</h5><br>
+        <h5 class="center"> CSC 7333 (Machine Learning)</h5>
+    
+        <form  class ="center" action="{{ url_for('predict')}}"method="post" >
+            <input class="title" type="text" name="Title" placeholder="News title (Headline)" required="required" /> <br>
+            <input type="text" name="Text" placeholder="Text" required="required" /> <br>
+            <input type="text" name="Subject" placeholder="Subject" required="required" /> <br>
+    
+            <button type="submit" class="btn">Predict</button>
+        </form>
+       <br>
+       <br>
+       <h4 class="center"><b>{{ prediction_text }}</b></h4>
+     </div>
+    
+    
+</body>
+</html>
