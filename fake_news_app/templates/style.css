@@ -1,0 +1,16 @@
+h2{color:gold; padding-top: 1%;}
+body{background-color: cornsilk;}
+input{display:block;}
+.btn:hover{background-color: goldenrod;}
+.center{margin: auto; max-width:fit-content;}
+form{padding-top: 0%;}
+div{margin: 2%;position: relative; background-color:gray;}
+footer{bottom: 0%; position: absolute;}
+h4{padding-bottom:4.5%;}
+.developers{color: lightyellow;}
+.image{text-align:center}
+.text_input{height:150px; width:500px; margin:auto;}
+.subject_area{height:50px; width:200px; margin:auto;}
+.title_field{height:30px; width:200px; margin:auto;}
+.course_title{color:lightsalmon}
+form{text-align: center;}
