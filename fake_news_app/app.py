@@ -7,6 +7,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+nltk.download('all')
 nltk.download('wordnet')
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
@@ -21,7 +22,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/predict',methods=['POST'])
+@app.route('/',methods=['POST'])
 def predict():
     text = [str(x) for x in request.form.values()]
     text = ' '.join(text) #merge the subject and text to a single string 
